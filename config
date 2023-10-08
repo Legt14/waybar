@@ -1,0 +1,99 @@
+[{
+    "layer": "top",
+    "height": 25,
+    "margin": 6,
+    "modules-left": ["custom/logo", "sway/workspaces", "sway/window" ],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "custom/shutdown"],
+    
+    "custom/logo": {
+        "format": " ",
+    },
+    "sway/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "format": "{icon}",
+         "warp-on-scroll": false,
+         "format-icons": {
+        "1": "<span color='#F7C599'></span>",
+        "2": "<span color='#F7C599'> </span>" ,
+        "3": "<span color='#F5CEA2'> </span>",
+        "4": "<span color='#1DB954'></span>",
+        "5": "",
+        "urgent": "",
+        "default": "",
+    }
+     },
+
+    "sway/window": {
+        "max-length": 25,
+	"format": "{app_id}"
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+
+    "pulseaudio":{
+	"format": "{volume}% {icon}",
+	"format-bluetooth": "{volume}% {icon}",
+	"format-muted": "0% ",
+	"format-icons": {
+	    "headphone": "",
+	    "hands-free": "",
+	    "headset": "",
+	    "default": ["", ""]
+	},
+	"scroll-step": 1,
+	"on-click": "pavucontrol",
+	"on-click-right": "pactl set-sink-mute 0 toggle",
+    },
+
+    "network" : {
+    	"format": "{ifname}",
+	"format-wifi": "{essid} ({signalStrength}%) ",
+	"format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    	"format-disconnected": "",
+	"max-length": 50
+   },
+   "cpu":{
+    	"format": "{}% ",
+    	"max-length": 10
+   },
+   "memory" : {
+    	"format": "{}% ",
+    	"max-length": 10
+   },
+   "clock": {
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "on-click-right": "mode",
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    },
+    "custom/shutdown": {
+        "format": " ",
+        "on-click": "shutdown now"
+    },
+
+}
+]
+

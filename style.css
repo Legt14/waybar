@@ -1,0 +1,98 @@
+/*
+	Russian_violet : #231942;
+	White : #edf2f4;
+	Ultra_violet: #5E548E;
+	Pink_lavender: #E0B1CB;
+	Purpel: #22007c;
+	Blue: #111144
+
+ */
+
+*{
+	color : #edf2f4;
+}
+
+window#waybar {
+    background-color: rgba(43, 48, 59, 0);
+    transition-property: background-color;
+    transition-duration: .5s;
+    padding : 5px;
+
+}
+
+#pulseaudio,
+#window,
+#network,
+#cpu,
+#clock,
+#memory {
+	margin: 0 3;
+	padding: 0 10px;
+	border-radius: 10px;
+	font-size: 12px;
+	color: #231942;
+}
+
+#workspaces {
+	background : #5E548E;
+	border-radius: 0 10px 10px 0;
+	border: none;
+	padding : 0.5 10;
+}
+
+
+#workspaces button {
+    background: transparent;
+    padding: 0 5;
+    margin:3;
+    border: none;
+}
+
+#workspaces button.focused {
+    border-radius: 5px;
+    background: #231942;
+}
+
+
+#custom-logo {
+  	padding: 0.5 15;
+	border-radius : 10px 0 0 10px;
+	background: #231942;
+	font-size:20px;
+	color:#F5CEA2;
+	border-bottom: 1 solid #4A348D;
+	border-top: 1 solid #4A348D;
+	border-left: 1 solid #4A348D;
+	margin: 0 0 0 3
+}
+
+#window {
+	background: #231942;
+	border-radius: 10px;
+	border: 1 solid #4A348D;
+	color:#F5CEA2;
+}
+
+
+
+#pulseaudio {
+	background-color: #F5CEA2;
+}
+
+#network {
+	background-color: #F5CEA2;
+}
+
+#cpu {
+	background: #E16174;
+
+}
+
+#memory {
+	background: #C93867;
+}
+
+#clock {
+	background: #F7C599
+}
+
